@@ -2,9 +2,20 @@
 @font-face {font-family: 'Input-Mono-Narrow-Thin';src: url('/fonts/Input Mono Narrow/InputMonoNarrow-Thin.ttf')}
 @font-face {font-family: 'Steinbeck';src: url('/fonts/steinbeck/SteinbeckItalic.woff')}
 
+:root {
+    --background-color-1: white;
+	--background-color-2: rgb(235, 235, 235);
+	--primary-text: black;
+	--secondary-text: grey;
+}
+
 body{
 	font-family: 'Input-Mono-Narrow-Thin', monospace;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: auto;
 }
 
 div, h1, h2, h3{
