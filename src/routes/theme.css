@@ -7,6 +7,9 @@
 	--background-color-2: rgb(235, 235, 235);
 	--primary-text: black;
 	--secondary-text: grey;
+	--big-button-background-color : black;
+	--big-button-background-color-hover : grey;
+	--big-button-label-color : white;
 }
 
 body{
