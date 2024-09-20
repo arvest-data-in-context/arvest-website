@@ -29,6 +29,10 @@
                 url = {"/"}
             />
             <TopNavLink 
+                label = {PageVocab.api[langVal]}
+                url = {"/"}
+            />
+            <TopNavLink 
                 label = {PageVocab.about[langVal]}
                 url = {"/"}
             />
@@ -43,6 +47,8 @@
         url = {"/"}
     />
 </div>
+
+<div id="nav_padding"></div>
 
 <style>
     header{
@@ -86,5 +92,9 @@
 
     .no-border{
         border-bottom: none;
+    }
+
+    #nav_padding{
+        height: 100px;
     }
 </style>
