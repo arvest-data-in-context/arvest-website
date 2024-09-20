@@ -1,6 +1,6 @@
 <script>
-    export const label = "Button";
-    export const url = "/";
+    export let label = "Button";
+    export let url = "/";
 </script>
 
 <a href={url}>

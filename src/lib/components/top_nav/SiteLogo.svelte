@@ -1,12 +1,12 @@
 <script>
-    export const img_src = "/arvest_logo_cut.png";
-    export const alt_text = "arvest logo";
-    export const site_name = "Arvest";
+    export let img_src = "/arvest_logo_cut.png";
+    export let alt_text = "arvest logo";
+    export let site_name = "Arvest";
 </script>
 
 <div>
     <a href="/">
-        <img src={img_src} alt="arvest logo">
+        <img src={img_src} alt={alt_text}>
         <p>{site_name}</p>
     </a>
 </div>

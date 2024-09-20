@@ -5,6 +5,14 @@
     import LangSelect from '$lib/components/top_nav/LangSelect.svelte';
 
     export let scrolled = false;
+
+    // Language handling:
+    import { lang } from '$lib/scripts/stores.js';
+    import PageVocab from '$lib/data/vocab/top_nav.json';
+    let langVal;
+	lang.subscribe(value => {
+		langVal = value;
+	});
 </script>
 
 <header class="{scrolled ? 'with-border' : 'no-border'}">
@@ -12,16 +20,28 @@
         <SiteLogo />
 
         <ul>
-            <TopNavLink />
-            <TopNavLink />
-            <TopNavLink />
+            <TopNavLink 
+                label = {PageVocab.community[langVal]}
+                url = {"/"}
+            />
+            <TopNavLink 
+                label = {PageVocab.learn[langVal]}
+                url = {"/"}
+            />
+            <TopNavLink 
+                label = {PageVocab.about[langVal]}
+                url = {"/"}
+            />
         </ul>
     </nav>
 </header>
 
 <div class="top_right_content">
     <LangSelect />
-    <BigButton />
+    <BigButton
+        label = {PageVocab.connect[langVal]}
+        url = {"/"}
+    />
 </div>
 
 <style>
