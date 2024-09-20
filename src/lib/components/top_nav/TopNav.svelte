@@ -2,9 +2,12 @@
     import SiteLogo from '$lib/components/top_nav/SiteLogo.svelte';
     import TopNavLink from '$lib/components/top_nav/TopNavLink.svelte';
     import BigButton from '$lib/components/general_ui/BigButton.svelte';
+    import LangSelect from '$lib/components/top_nav/LangSelect.svelte';
+
+    export let scrolled = false;
 </script>
 
-<header>
+<header class="{scrolled ? 'with-border' : 'no-border'}">
     <nav>
         <SiteLogo />
 
@@ -13,21 +16,23 @@
             <TopNavLink />
             <TopNavLink />
         </ul>
-
-        <div class="top_right_content">
-            <BigButton />
-        </div>
-        
     </nav>
 </header>
+
+<div class="top_right_content">
+    <LangSelect />
+    <BigButton />
+</div>
 
 <style>
     header{
         width: 100%;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-top: 0.5em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 0.7em;
+        padding-bottom: 0.7em;
         background-color: var(--background-color-1);
+        position: fixed;
     }
 
     nav{
@@ -44,14 +49,22 @@
     }
 
     .top_right_content{
-        position: absolute;
+        position: fixed;
         top:0;
         right:0;
         align-items: center;
         display: flex;
         gap: 0.5em;
         flex-wrap: wrap;
-        padding-right: 0.5em;
-        padding-top: 0.5em;
+        padding-right: 2em;
+        padding-top: 0.75em;
+    }
+
+    .with-border{
+        border-bottom: solid grey 1px;
+    }
+
+    .no-border{
+        border-bottom: none;
     }
 </style>

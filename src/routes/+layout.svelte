@@ -1,15 +1,35 @@
 <script>
 	import './reset.css';
 	import './theme.css';
+	import { onMount } from 'svelte';
 
 	import TopNav from '$lib/components/top_nav/TopNav.svelte';
+
+	let global_container;
+	let scrolled = false;
+
+	function handle_scroll(){
+		scrolled = global_container.scrollTop > 0;
+	};
+
+	onMount(()=> {
+		handle_scroll();
+		global_container.addEventListener('scroll', function(e) {
+			handle_scroll();
+		})
+	})
 </script>
 
-<div id="global_container">
-	<div id="page_container">
-		<TopNav />
-		<br>
-		<slot />
+
+<div id="global_container" bind:this={global_container}>
+	<div id="page_container" >
+		<TopNav 
+			scrolled = {scrolled}
+		/>
+
+		<div id="content_container">
+			<slot />
+		</div>
 	</div>
 	
 </div>
@@ -28,5 +48,10 @@
 
 	#page_container{
 		position: relative;
+	}
+
+	#content_container{
+		padding-left: 2em;
+		padding-right: 2em;
 	}
 </style>
