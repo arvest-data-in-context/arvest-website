@@ -20,10 +20,14 @@
     <p id="long_description">
         {PageVocab.long_description[langVal]}
     </p>
+    <div id="main_button_resizer">
     <BigButton
         label = {PageVocab.start_creating[langVal]}
         url = {"/"}
     />
+    </div>
+
+    
 
     <img id="main_demo_image" src="/imgs/network_visualization_hi_res.png" alt="arvest screen shot">
 </div>
@@ -90,5 +94,61 @@
         margin-top: 2em;
         width: 100%;
         border-radius: 5px;
+    }
+
+    #main_button_resizer{
+        font-size: 1em;
+    }
+
+    /* LARGE SCREENS */
+    @media (min-width: 1500px) {
+        h1{
+            font-size: 2em;
+        }
+        #long_description{
+            font-size: 1em;
+        }
+        #main_button_resizer{
+            font-size: 1em;
+        }
+    }
+
+    /* MEDIUM SCREENS */
+    @media (min-width: 1200px) and (max-width: 1499px)  {
+        h1{
+            font-size: 2em;
+        }
+        #long_description{
+            font-size: 1em;
+        }
+        #main_button_resizer{
+            font-size: 1em;
+        }
+    }
+
+    /* SMALL SCREENS */
+    @media (min-width: 700px) and (max-width: 1199px) {
+        h1{
+            font-size: 2em;
+        }
+        #long_description{
+            font-size: 0.7em;
+        }
+        #main_button_resizer{
+            font-size: 1em;
+        }
+    }
+
+    /* VERY SMALL SCREENS */
+    @media (max-width: 699px) {
+        h1{
+            font-size: 1em;
+        }
+        #long_description{
+            font-size: 0.5em;
+        }
+        #main_button_resizer{
+            font-size: 0.7em;
+        }
     }
 </style>
