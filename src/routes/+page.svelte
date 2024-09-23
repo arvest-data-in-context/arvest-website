@@ -29,42 +29,42 @@
 
     
 
-    <img id="main_demo_image" src="/imgs/network_visualization_hi_res.png" alt="arvest screen shot">
+    <img id="main_demo_image" src="/imgs/front_page_content/network_visualization_hi_res.png" alt="arvest screen shot">
 </div>
 
 <div id="feature_section">
     <FeatureCard
         title = {PageVocab.features.create_collections.title[langVal]}
         description = {PageVocab.features.create_collections.desc[langVal]}
-        image_url = "/imgs/create_collections.png"
-        image_alt = "create collections image",
+        image_url = "/imgs/front_page_content/create_collections.png"
+        image_alt = "create collections image"
         button_label = {PageVocab.features.create_collections.button[langVal]}
     />
     <FeatureCard
         title = {PageVocab.features.create_annotations.title[langVal]}
         description = {PageVocab.features.create_annotations.desc[langVal]}
-        image_url = "/imgs/create_collections.png"
+        image_url = "/imgs/front_page_content/create_collections.png"
         image_alt = "create collections image"
         button_label = {PageVocab.features.create_annotations.button[langVal]}
     />
     <FeatureCard
         title = {PageVocab.features.navigate_networks.title[langVal]}
         description = {PageVocab.features.navigate_networks.desc[langVal]}
-        image_url = "/imgs/network_visualization_hi_res.png"
+        image_url = "/imgs/front_page_content/network_visualization_hi_res.png"
         image_alt = "create collections image"
         button_label = {PageVocab.features.navigate_networks.button[langVal]}
     />
     <FeatureCard
         title = {PageVocab.features.ml_workflows.title[langVal]}
         description = {PageVocab.features.ml_workflows.desc[langVal]}
-        image_url = "/imgs/network_visualization_hi_res.png"
+        image_url = "/imgs/front_page_content/network_visualization_hi_res.png"
         image_alt = "create collections image"
         button_label = {PageVocab.features.ml_workflows.button[langVal]}
     />
     <FeatureCard
         title = {PageVocab.features.iiif_compliant.title[langVal]}
         description = {PageVocab.features.iiif_compliant.desc[langVal]}
-        image_url = "/imgs/gallica.png"
+        image_url = "/imgs/front_page_content/gallica.png"
         image_alt = "create collections image"
         button_label = {PageVocab.features.iiif_compliant.button[langVal]}
     />

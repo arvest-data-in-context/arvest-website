@@ -1,10 +1,15 @@
 <script>
+    import { onMount } from 'svelte';
+
     import SiteLogo from '$lib/components/top_nav/SiteLogo.svelte';
     import TopNavLink from '$lib/components/top_nav/TopNavLink.svelte';
     import BigButton from '$lib/components/general_ui/BigButton.svelte';
     import LangSelect from '$lib/components/top_nav/LangSelect.svelte';
+    import HamburgerMenu from '$lib/components/top_nav/HamburgerMenu.svelte';
 
     export let scrolled = false;
+    let small_screen = false;
+    let hamburger_revealed = false;
 
     // Language handling:
     import { lang } from '$lib/scripts/stores.js';
@@ -13,43 +18,110 @@
 	lang.subscribe(value => {
 		langVal = value;
 	});
+
+    const updateScreenWidth = () => {
+        if(window.innerWidth < 1200){
+            if(small_screen == false){
+                small_screen = true;
+            }
+        }
+        else{
+            if(small_screen == true){
+                small_screen = false;
+            }
+        }
+    };
+
+    onMount(() => {
+        updateScreenWidth();
+
+        window.addEventListener('resize', () => {
+            updateScreenWidth()
+        });
+    });
+
+    function hangle_hamburger_state_change(e){
+        hamburger_revealed = e.detail.state;
+    };
 </script>
 
 <header class="{scrolled ? 'with-border' : 'no-border'}">
     <nav>
         <SiteLogo />
 
-        <ul>
-            <li>
-            <TopNavLink 
-                label = {PageVocab.community[langVal]}
-                url = {"/"}
-            />
-        </li>
-        <li>
-            <TopNavLink 
-                label = {PageVocab.learn[langVal]}
-                url = {"/"}
-            />
-        </li>
-        <li>
-            <TopNavLink 
-                label = {PageVocab.api[langVal]}
-                url = {"/"}
-            />
-        </li>
-        <li>
-            <TopNavLink 
-                label = {PageVocab.about[langVal]}
-                url = {"/"}
-            />
-        </li>
-        </ul>
+        {#if small_screen == false}
+            <ul>
+                <li>
+                    <TopNavLink 
+                        label = {PageVocab.community[langVal]}
+                        url = {"/"}
+                    />
+                </li>
+                <li>
+                    <TopNavLink 
+                        label = {PageVocab.learn[langVal]}
+                        url = {"/"}
+                    />
+                </li>
+                <li>
+                    <TopNavLink 
+                        label = {PageVocab.api[langVal]}
+                        url = {"/"}
+                    />
+                </li>
+                <li>
+                    <TopNavLink 
+                        label = {PageVocab.about[langVal]}
+                        url = {"/"}
+                    />
+                </li>
+            </ul>
+        {/if}
     </nav>
+
+    {#if hamburger_revealed}
+        <div id="hamburger_menu">
+            <ul>
+                <li>
+                    <TopNavLink 
+                        label = {PageVocab.community[langVal]}
+                        url = {"/"}
+                    />
+                </li>
+                <li>
+                    <TopNavLink 
+                        label = {PageVocab.learn[langVal]}
+                        url = {"/"}
+                    />
+                </li>
+                <li>
+                    <TopNavLink 
+                        label = {PageVocab.api[langVal]}
+                        url = {"/"}
+                    />
+                </li>
+                <li>
+                    <TopNavLink 
+                        label = {PageVocab.about[langVal]}
+                        url = {"/"}
+                    />
+                </li>
+            </ul>
+
+            <LangSelect />
+        </div>
+    {/if}
 </header>
 
 <div class="top_right_content">
-    <LangSelect />
+    {#if small_screen == false}
+        <LangSelect />
+    {:else}
+        <HamburgerMenu 
+            on:update_hamburger={hangle_hamburger_state_change}
+        />
+    {/if}
+    
     <BigButton
         label = {PageVocab.connect[langVal]}
         url = {"/"}
@@ -104,6 +176,19 @@
 
     #nav_padding{
         height: 100px;
+    }
+
+    #hamburger_menu{
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    #hamburger_menu ul{
+        display: inline;
+    }
+
+    #hamburger_menu ul li{
+        padding-bottom: 1em;
     }
 
     /* LARGE SCREENS */

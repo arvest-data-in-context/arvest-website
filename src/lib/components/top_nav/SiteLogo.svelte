@@ -1,5 +1,5 @@
 <script>
-    export let img_src = "/arvest_logo_cut.png";
+    export let img_src = "/imgs/logos/arvest_logo_cut.png";
     export let alt_text = "arvest logo";
     export let site_name = "Arvest";
 </script>

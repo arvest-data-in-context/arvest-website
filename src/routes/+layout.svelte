@@ -19,6 +19,11 @@
 			handle_scroll();
 		})
 	})
+
+	function handle_get_scrolled(){
+		handle_scroll();
+		handle_scroll();
+	}
 </script>
 
 
@@ -26,6 +31,7 @@
 	<div id="page_container" >
 		<TopNav 
 			scrolled = {scrolled}
+			on:get_scrolled={handle_get_scrolled}
 		/>
 
 		<div id="content_container">
