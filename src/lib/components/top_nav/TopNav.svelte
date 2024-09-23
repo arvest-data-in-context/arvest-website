@@ -97,4 +97,48 @@
     #nav_padding{
         height: 100px;
     }
+
+    /* LARGE SCREENS */
+    @media (min-width: 1500px) {
+        header{
+            padding-left: 12em;
+            padding-right: 12em;
+        }
+        .top_right_content{
+            padding-right: 10em;
+        }
+    }
+
+    /* MEDIUM SCREENS */
+    @media (min-width: 1200px) and (max-width: 1499px)  {
+        header{
+            padding-left: 6em;
+            padding-right: 6em;
+        }
+        .top_right_content{
+            padding-right: 5em;
+        }
+    }
+
+    /* SMALL SCREENS */
+    @media (min-width: 700px) and (max-width: 1199px) {
+        header{
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+        .top_right_content{
+            padding-right: 2em;
+        }
+    }
+
+    /* VERY SMALL SCREENS */
+    @media (max-width: 699px) {
+        header{
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        .top_right_content{
+            padding-right: 0.9em;
+        }
+    }
 </style>

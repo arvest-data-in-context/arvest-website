@@ -58,4 +58,32 @@
     img{
         width: 70%;
     }
+
+    /* LARGE SCREENS */
+    @media (min-width: 1500px) {
+        #container{
+            background-color: red;
+        }
+    }
+
+    /* MEDIUM SCREENS */
+    @media (min-width: 1200px) and (max-width: 1499px)  {
+        #container{
+            background-color: green;
+        }
+    }
+
+    /* SMALL SCREENS */
+    @media (min-width: 700px) and (max-width: 1199px) {
+        #container{
+            background-color: blue;
+        }
+    }
+
+    /* VERY SMALL SCREENS */
+    @media (max-width: 699px) {
+        #container{
+            background-color: black;
+        }
+    }
 </style>

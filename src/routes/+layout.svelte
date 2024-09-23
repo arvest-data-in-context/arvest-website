@@ -54,4 +54,36 @@
 		padding-left: 10em;
 		padding-right: 10em;
 	}
+
+	/* LARGE SCREENS */
+    @media (min-width: 1500px) {
+        #content_container{
+            padding-left: 10em;
+			padding-right: 10em;
+        }
+    }
+
+    /* MEDIUM SCREENS */
+    @media (min-width: 1200px) and (max-width: 1499px)  {
+        #content_container{
+            padding-left: 5em;
+			padding-right: 5em;
+        }
+    }
+
+    /* SMALL SCREENS */
+    @media (min-width: 700px) and (max-width: 1199px) {
+        #content_container{
+            padding-left: 2em;
+			padding-right: 2em;
+        }
+    }
+
+    /* VERY SMALL SCREENS */
+    @media (max-width: 699px) {
+        #content_container{
+            padding-left: 1em;
+			padding-right: 1em;
+        }
+    }
 </style>
