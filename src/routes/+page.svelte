@@ -111,6 +111,9 @@
         #main_button_resizer{
             font-size: 1em;
         }
+        #top_section{
+            padding-top: 3em;
+        }
     }
 
     /* MEDIUM SCREENS */
@@ -123,6 +126,9 @@
         }
         #main_button_resizer{
             font-size: 1em;
+        }
+        #top_section{
+            padding-top: 1em;
         }
     }
 
@@ -137,6 +143,9 @@
         #main_button_resizer{
             font-size: 1em;
         }
+        #top_section{
+            padding-top: 2em;
+        }
     }
 
     /* VERY SMALL SCREENS */
@@ -149,6 +158,9 @@
         }
         #main_button_resizer{
             font-size: 0.7em;
+        }
+        #top_section{
+            padding-top: 3em;
         }
     }
 </style>
