@@ -51,7 +51,7 @@
 	}
 
 	#content_container{
-		padding-left: 2em;
-		padding-right: 2em;
+		padding-left: 10em;
+		padding-right: 10em;
 	}
 </style>

@@ -34,13 +34,11 @@
         padding-bottom: 3em;
         width: 100%;
         display: flex;
-        gap: 2em;
-        align-items: center;
+        gap: 1em;
     }
 
     #text_content{
         width: 30%;
-        align-self: center;
         height: fit-content;
     }
 
@@ -58,6 +56,6 @@
     }
 
     img{
-        width: 50%;
+        width: 70%;
     }
 </style>

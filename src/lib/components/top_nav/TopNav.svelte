@@ -53,8 +53,8 @@
 <style>
     header{
         width: 100%;
-        padding-left: 2em;
-        padding-right: 2em;
+        padding-left: 12em;
+        padding-right: 12em;
         padding-top: 0.7em;
         padding-bottom: 0.7em;
         background-color: var(--background-color-1);
@@ -82,7 +82,7 @@
         display: flex;
         gap: 0.5em;
         flex-wrap: wrap;
-        padding-right: 2em;
+        padding-right: 10em;
         padding-top: 0.75em;
     }
 
