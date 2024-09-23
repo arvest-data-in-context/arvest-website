@@ -6,6 +6,8 @@
 	lang.subscribe(value => {
 		langVal = value;
 	});
+
+    const currentYear = new Date().getFullYear();
 </script>
 
 <footer>
@@ -50,6 +52,15 @@
         </div>
         
     </nav>
+
+    <div id="logo_container">
+        <a class="logo_link" href="https://creativecommons.org/"><img src="/imgs/logos/cc-black.png" alt="creative commons logo" /></a>
+        <a class="logo_link" href="https://www.horizon-europe.gouv.fr/erc"><img src="/imgs/logos/erc-black.png" alt="erc logo" /></a>
+        <a class="logo_link" href="/"><img src="/imgs/logos/europe-black.png" alt="europe logo" /></a>
+        <a class="logo_link" href="https://www.univ-rennes2.fr/"><img src="/imgs/logos/R2-black.png" alt="rennes 2 logo" /></a>
+    </div>  
+
+    <p id="copyright_notice">© 2023 - {currentYear} Arvest</p>
 </footer>
 
 <style>
@@ -105,6 +116,27 @@
 
     li{
         padding-bottom: 0.3em;
+    }
+
+    #copyright_notice{
+        width: 100%;
+        text-align: center;
+        padding-top: 5em;
+        font-size: 0.5em;
+    }
+
+    #logo_container{
+        padding-top: 3em;
+        display: flex;
+        width: 100%;
+        gap: 2em;
+        flex-wrap: wrap;
+    }
+    .logo_link:hover{
+        cursor: pointer;
+    }
+    img{
+        height: 50px;
     }
 
     /* LARGE SCREENS */
