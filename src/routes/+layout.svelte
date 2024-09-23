@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 
 	import TopNav from '$lib/components/top_nav/TopNav.svelte';
+	import Footer from '$lib/components/footer/Footer.svelte';
 
 	let global_container;
 	let scrolled = false;
@@ -30,8 +31,11 @@
 		<div id="content_container">
 			<slot />
 		</div>
+
+		
 	</div>
-	
+
+	<Footer />
 </div>
 
 <style>

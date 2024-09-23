@@ -20,22 +20,30 @@
         <SiteLogo />
 
         <ul>
+            <li>
             <TopNavLink 
                 label = {PageVocab.community[langVal]}
                 url = {"/"}
             />
+        </li>
+        <li>
             <TopNavLink 
                 label = {PageVocab.learn[langVal]}
                 url = {"/"}
             />
+        </li>
+        <li>
             <TopNavLink 
                 label = {PageVocab.api[langVal]}
                 url = {"/"}
             />
+        </li>
+        <li>
             <TopNavLink 
                 label = {PageVocab.about[langVal]}
                 url = {"/"}
             />
+        </li>
         </ul>
     </nav>
 </header>

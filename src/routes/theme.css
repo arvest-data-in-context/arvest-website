@@ -21,6 +21,10 @@ body{
 	overflow: auto;
 }
 
+footer{
+	box-sizing: border-box;
+}
+
 div, h1, h2, h3{
 	box-sizing: border-box;
 	font-family: 'Steinbeck', monospace;
