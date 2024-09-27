@@ -135,6 +135,13 @@
 
             <div class="right_ham_cont">
                 <LangSelect />
+
+                <div class="extra_thin_connect_button">
+                    <BigButton
+                        label = {PageVocab.connect[langVal]}
+                        url = {"/"}
+                    />
+                </div>
             </div>
         </div>
     {/if}
@@ -142,7 +149,9 @@
 
 <div class="top_right_content">
     {#if small_screen == false}
+    <div class="lang_wrap">
         <LangSelect />
+    </div>    
     {/if}
     <div id="hams" class="{small_screen ? "unhide_hams" : "hide_hams"}">
         <HamburgerMenu 
@@ -151,20 +160,25 @@
         />
     </div>
     
-    <BigButton
-        label = {PageVocab.connect[langVal]}
-        url = {"/"}
-    />
+    <div class="connect_button_cont">
+        <BigButton
+            label = {PageVocab.connect[langVal]}
+            url = {"/"}
+        />
+    </div>
+
 </div>
 
 <div id="nav_padding"></div>
 
 <style>
-    .hide_hams{
-        display: none;
+    .lang_wrap{
+        font-size: 1em;
+        align-self: baseline;
     }
-    .unhide_hams{
-        display: block;
+    .connect_button_cont{
+        font-size: 1em;
+        align-self: baseline;
     }
 
     header{
@@ -228,6 +242,22 @@
     .right_ham_cont{
         margin-right: 3.7em;
         font-size: 1em;
+        
+        height: 100%;
+        display: inline;
+    }
+
+    .extra_thin_connect_button{
+        margin-top: 0.5em;
+        font-size: 0.8em;
+        display: none;
+    }
+
+    .hide_hams{
+        display: none;
+    }
+    .unhide_hams{
+        display: block;
     }
 
     /* LARGE SCREENS */
@@ -241,6 +271,9 @@
         }
         .right_ham_cont{
             margin-right: 3.7em;
+        }
+        #hamburger_menu ul li{
+            font-size: 1em;
         }
     }
 
@@ -256,6 +289,9 @@
         .right_ham_cont{
             margin-right: 3.7em;
         }
+        #hamburger_menu ul li{
+            font-size: 1em;
+        }
     }
 
     /* SMALL SCREENS */
@@ -270,10 +306,13 @@
         .right_ham_cont{
             margin-right: 3.7em;
         }
+        #hamburger_menu ul li{
+            font-size: 0.7em;
+        }
     }
 
     /* VERY SMALL SCREENS */
-    @media (max-width: 699px) {
+    @media (min-width: 500px) and (max-width: 699px) {
         header{
             padding-left: 1em;
             padding-right: 1em;
@@ -283,6 +322,32 @@
         }
         .right_ham_cont{
             margin-right: 1.8em;
+        }
+        #hamburger_menu ul li{
+            font-size: 0.7em;
+        }
+    }
+
+    /* EXTRA THIN SCREENS */
+    @media (max-width: 499px) {
+        header{
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        .top_right_content{
+            padding-right: 0.9em;
+        }
+        .right_ham_cont{
+            margin-right: 1.8em;
+        }
+        #hamburger_menu ul li{
+            font-size: 0.7em;
+        }
+        .connect_button_cont{
+            display: none;
+        }
+        .extra_thin_connect_button{
+            display: block;
         }
     }
 </style>
