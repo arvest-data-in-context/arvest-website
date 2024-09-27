@@ -56,7 +56,7 @@
     <div id="logo_container">
         <a class="logo_link" href="https://creativecommons.org/"><img src="/imgs/logos/cc-black.png" alt="creative commons logo" /></a>
         <a class="logo_link" href="https://www.horizon-europe.gouv.fr/erc"><img src="/imgs/logos/erc-black.png" alt="erc logo" /></a>
-        <a class="logo_link" href="/"><img src="/imgs/logos/europe-black.png" alt="europe logo" /></a>
+        <a class="logo_link" href="https://european-union.europa.eu/"><img src="/imgs/logos/europe-black.png" alt="europe logo" /></a>
         <a class="logo_link" href="https://www.univ-rennes2.fr/"><img src="/imgs/logos/R2-black.png" alt="rennes 2 logo" /></a>
     </div>  
 

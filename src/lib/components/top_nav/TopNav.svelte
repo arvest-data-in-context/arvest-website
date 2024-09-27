@@ -22,7 +22,7 @@
 	});
 
     const updateScreenWidth = () => {
-        if(window.innerWidth < 1200){
+        if(window.innerWidth < 1300){
             if(small_screen == false){
                 small_screen = true;
             }
@@ -278,7 +278,7 @@
     }
 
     /* MEDIUM SCREENS */
-    @media (min-width: 1200px) and (max-width: 1499px)  {
+    @media (min-width: 1301px) and (max-width: 1499px)  {
         header{
             padding-left: 6em;
             padding-right: 6em;
@@ -295,7 +295,7 @@
     }
 
     /* SMALL SCREENS */
-    @media (min-width: 700px) and (max-width: 1199px) {
+    @media (min-width: 700px) and (max-width: 1300px) {
         header{
             padding-left: 2em;
             padding-right: 2em;
