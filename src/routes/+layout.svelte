@@ -8,9 +8,11 @@
 
 	let global_container;
 	let scrolled = false;
+	let top_nav_element;
 
 	function handle_scroll(){
 		scrolled = global_container.scrollTop > 0;
+		top_nav_element.handle_scroll(scrolled);
 	};
 
 	onMount(()=> {
@@ -19,19 +21,13 @@
 			handle_scroll();
 		})
 	})
-
-	function handle_get_scrolled(){
-		handle_scroll();
-		handle_scroll();
-	}
 </script>
 
 
 <div id="global_container" bind:this={global_container}>
 	<div id="page_container" >
 		<TopNav 
-			scrolled = {scrolled}
-			on:get_scrolled={handle_get_scrolled}
+			bind:this = {top_nav_element}
 		/>
 
 		<div id="content_container">

@@ -2,7 +2,15 @@
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher();
 
-    let revealed = false
+    let revealed = false;
+
+    export const set_hamburger_state = (to_set) => {        
+        revealed = to_set;
+
+        dispatch('update_hamburger', {
+			state: revealed
+		});
+    }
 
     function handle_reveal(){
         if(revealed == false){

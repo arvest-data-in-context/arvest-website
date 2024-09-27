@@ -7,9 +7,11 @@
     import LangSelect from '$lib/components/top_nav/LangSelect.svelte';
     import HamburgerMenu from '$lib/components/top_nav/HamburgerMenu.svelte';
 
-    export let scrolled = false;
     let small_screen = false;
     let hamburger_revealed = false;
+    let scrolled = false;
+    let show_border = false;
+    let hamburger_element;
 
     // Language handling:
     import { lang } from '$lib/scripts/stores.js';
@@ -29,6 +31,7 @@
             if(small_screen == true){
                 small_screen = false;
             }
+            hamburger_element.set_hamburger_state(false);
         }
     };
 
@@ -38,14 +41,36 @@
         window.addEventListener('resize', () => {
             updateScreenWidth()
         });
+
+        handle_border_show();
     });
+
+    function handle_border_show(){
+        if(hamburger_revealed == true){
+            show_border = true;
+        }
+        else{
+            if(scrolled == true){
+                show_border = true;
+            }
+            else{
+                show_border = false;
+            }
+        };
+    }
 
     function hangle_hamburger_state_change(e){
         hamburger_revealed = e.detail.state;
+        handle_border_show();
     };
+
+    export const handle_scroll = (scroll_state) => {
+        scrolled = scroll_state;
+        handle_border_show();
+    }
 </script>
 
-<header class="{scrolled ? 'with-border' : 'no-border'}">
+<header class:show_border={show_border}>
     <nav>
         <SiteLogo />
 
@@ -108,7 +133,9 @@
                 </li>
             </ul>
 
-            <LangSelect />
+            <div class="right_ham_cont">
+                <LangSelect />
+            </div>
         </div>
     {/if}
 </header>
@@ -116,11 +143,13 @@
 <div class="top_right_content">
     {#if small_screen == false}
         <LangSelect />
-    {:else}
+    {/if}
+    <div id="hams" class="{small_screen ? "unhide_hams" : "hide_hams"}">
         <HamburgerMenu 
+            bind:this={hamburger_element}
             on:update_hamburger={hangle_hamburger_state_change}
         />
-    {/if}
+    </div>
     
     <BigButton
         label = {PageVocab.connect[langVal]}
@@ -131,6 +160,13 @@
 <div id="nav_padding"></div>
 
 <style>
+    .hide_hams{
+        display: none;
+    }
+    .unhide_hams{
+        display: block;
+    }
+
     header{
         width: 100%;
         padding-left: 12em;
@@ -139,6 +175,10 @@
         padding-bottom: 0.7em;
         background-color: var(--background-color-1);
         position: fixed;
+    }
+
+    .show_border{
+        border-bottom: solid grey 1px;
     }
 
     nav{
@@ -166,14 +206,6 @@
         padding-top: 0.75em;
     }
 
-    .with-border{
-        border-bottom: solid grey 1px;
-    }
-
-    .no-border{
-        border-bottom: none;
-    }
-
     #nav_padding{
         height: 100px;
     }
@@ -181,6 +213,8 @@
     #hamburger_menu{
         width: 100%;
         margin-top: 1em;
+        display: flex;
+        justify-content: space-between;
     }
 
     #hamburger_menu ul{
@@ -188,7 +222,12 @@
     }
 
     #hamburger_menu ul li{
-        padding-bottom: 1em;
+        padding-bottom: 0.5em;
+    }
+
+    .right_ham_cont{
+        margin-right: 3.7em;
+        font-size: 1em;
     }
 
     /* LARGE SCREENS */
@@ -199,6 +238,9 @@
         }
         .top_right_content{
             padding-right: 10em;
+        }
+        .right_ham_cont{
+            margin-right: 3.7em;
         }
     }
 
@@ -211,6 +253,9 @@
         .top_right_content{
             padding-right: 5em;
         }
+        .right_ham_cont{
+            margin-right: 3.7em;
+        }
     }
 
     /* SMALL SCREENS */
@@ -222,6 +267,9 @@
         .top_right_content{
             padding-right: 2em;
         }
+        .right_ham_cont{
+            margin-right: 3.7em;
+        }
     }
 
     /* VERY SMALL SCREENS */
@@ -232,6 +280,9 @@
         }
         .top_right_content{
             padding-right: 0.9em;
+        }
+        .right_ham_cont{
+            margin-right: 1.8em;
         }
     }
 </style>
