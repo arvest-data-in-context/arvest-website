@@ -1,4 +1,4 @@
-**THIS HAS MIGRATED TO [GITLAB](https://gitlab.huma-num.fr/arvest/arvest.gitpages.huma-num.fr)***
+**THIS HAS MIGRATED TO [GITLAB](https://gitlab.huma-num.fr/arvest/arvest.gitpages.huma-num.fr)**
 
 # arvest.app
 
