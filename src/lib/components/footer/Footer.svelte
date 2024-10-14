@@ -17,37 +17,37 @@
 
         <div id="menus">
             <ul class="menu_section">
-                <li><a href="/" class="menu_top_link">{PageVocab.community[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.projects[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.forum[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.news[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.stage[langVal]}</a></li>
+                <li><a href="/community" class="menu_top_link">{PageVocab.community[langVal]}</a></li>
+                <li><a href="/community/projects" class="menu_lower_link">{PageVocab.projects[langVal]}</a></li>
+                <li><a href="/community/forum" class="menu_lower_link">{PageVocab.forum[langVal]}</a></li>
+                <li><a href="/community/news" class="menu_lower_link">{PageVocab.news[langVal]}</a></li>
+                <li><a href="https://stage-to-data.huma-num.fr/" class="menu_lower_link">{PageVocab.stage[langVal]}</a></li>
             </ul>
     
             <ul class="menu_section">
-                <li><a href="/" class="menu_top_link">{PageVocab.learn[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.tutorials[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.ml[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.iiif[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.other_tools[langVal]}</a></li>
+                <li><a href="/learn" class="menu_top_link">{PageVocab.learn[langVal]}</a></li>
+                <li><a href="/learn/tutorials" class="menu_lower_link">{PageVocab.tutorials[langVal]}</a></li>
+                <li><a href="/learn/ml" class="menu_lower_link">{PageVocab.ml[langVal]}</a></li>
+                <li><a href="/learn/iiif" class="menu_lower_link">{PageVocab.iiif[langVal]}</a></li>
+                <li><a href="/learn/othertools" class="menu_lower_link">{PageVocab.other_tools[langVal]}</a></li>
             </ul>
     
             <ul class="menu_section">
-                <li><a href="/" class="menu_top_link">{PageVocab.api[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.reference[langVal]}</a></li>
+                <li><a href="/api" class="menu_top_link">{PageVocab.api[langVal]}</a></li>
+                <li><a href="/api/reference" class="menu_lower_link">{PageVocab.reference[langVal]}</a></li>
             </ul>
     
             <ul class="menu_section">
-                <li><a href="/" class="menu_top_link">{PageVocab.about[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.about_arvest[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.team[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.accessibility[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.credits[langVal]}</a></li>
+                <li><a href="/about" class="menu_top_link">{PageVocab.about[langVal]}</a></li>
+                <li><a href="/about/arvest" class="menu_lower_link">{PageVocab.about_arvest[langVal]}</a></li>
+                <li><a href="/about/team" class="menu_lower_link">{PageVocab.team[langVal]}</a></li>
+                <li><a href="/about/accessibility" class="menu_lower_link">{PageVocab.accessibility[langVal]}</a></li>
+                <li><a href="/about/credits" class="menu_lower_link">{PageVocab.credits[langVal]}</a></li>
             </ul>
     
             <ul class="menu_section">
-                <li><a href="/" class="menu_top_link">{PageVocab.connect[langVal]}</a></li>
-                <li><a href="/" class="menu_lower_link">{PageVocab.demo[langVal]}</a></li>
+                <li><a href="https://arvest-dev.tetras-libre.fr/" class="menu_top_link">{PageVocab.connect[langVal]}</a></li>
+                <li><a href="/demo" class="menu_lower_link">{PageVocab.demo[langVal]}</a></li>
             </ul>
         </div>
         

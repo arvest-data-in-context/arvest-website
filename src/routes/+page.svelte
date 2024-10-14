@@ -23,7 +23,7 @@
     <div id="main_button_resizer">
     <BigButton
         label = {PageVocab.start_creating[langVal]}
-        url = {"/"}
+        url = {"https://arvest-dev.tetras-libre.fr/"}
     />
     </div>
 
@@ -39,6 +39,7 @@
         image_url = "/imgs/front_page_content/create_collections.png"
         image_alt = "create collections image"
         button_label = {PageVocab.features.create_collections.button[langVal]}
+        button_url = "https://arvest-dev.tetras-libre.fr/"
     />
     <FeatureCard
         title = {PageVocab.features.create_annotations.title[langVal]}
@@ -46,6 +47,7 @@
         image_url = "/imgs/front_page_content/create_collections.png"
         image_alt = "create collections image"
         button_label = {PageVocab.features.create_annotations.button[langVal]}
+        button_url = "https://arvest-dev.tetras-libre.fr/"
     />
     <FeatureCard
         title = {PageVocab.features.navigate_networks.title[langVal]}
@@ -53,6 +55,7 @@
         image_url = "/imgs/front_page_content/network_visualization_hi_res.png"
         image_alt = "create collections image"
         button_label = {PageVocab.features.navigate_networks.button[langVal]}
+        button_url = "https://arvest-dev.tetras-libre.fr/"
     />
     <FeatureCard
         title = {PageVocab.features.ml_workflows.title[langVal]}
@@ -60,6 +63,7 @@
         image_url = "/imgs/front_page_content/network_visualization_hi_res.png"
         image_alt = "create collections image"
         button_label = {PageVocab.features.ml_workflows.button[langVal]}
+        button_url = "https://arvest-dev.tetras-libre.fr/"
     />
     <FeatureCard
         title = {PageVocab.features.iiif_compliant.title[langVal]}
@@ -67,6 +71,7 @@
         image_url = "/imgs/front_page_content/gallica.png"
         image_alt = "create collections image"
         button_label = {PageVocab.features.iiif_compliant.button[langVal]}
+        button_url = "https://arvest-dev.tetras-libre.fr/"
     />
 </div>
 

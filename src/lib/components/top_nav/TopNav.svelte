@@ -79,25 +79,25 @@
                 <li>
                     <TopNavLink 
                         label = {PageVocab.community[langVal]}
-                        url = {"/"}
+                        url = {"/community"}
                     />
                 </li>
                 <li>
                     <TopNavLink 
                         label = {PageVocab.learn[langVal]}
-                        url = {"/"}
+                        url = {"/learn"}
                     />
                 </li>
                 <li>
                     <TopNavLink 
                         label = {PageVocab.api[langVal]}
-                        url = {"/"}
+                        url = {"/api"}
                     />
                 </li>
                 <li>
                     <TopNavLink 
                         label = {PageVocab.about[langVal]}
-                        url = {"/"}
+                        url = {"/about"}
                     />
                 </li>
             </ul>
@@ -110,25 +110,25 @@
                 <li>
                     <TopNavLink 
                         label = {PageVocab.community[langVal]}
-                        url = {"/"}
+                        url = {"/community"}
                     />
                 </li>
                 <li>
                     <TopNavLink 
                         label = {PageVocab.learn[langVal]}
-                        url = {"/"}
+                        url = {"/learn"}
                     />
                 </li>
                 <li>
                     <TopNavLink 
                         label = {PageVocab.api[langVal]}
-                        url = {"/"}
+                        url = {"/api"}
                     />
                 </li>
                 <li>
                     <TopNavLink 
                         label = {PageVocab.about[langVal]}
-                        url = {"/"}
+                        url = {"/about"}
                     />
                 </li>
             </ul>
@@ -139,7 +139,7 @@
                 <div class="extra_thin_connect_button">
                     <BigButton
                         label = {PageVocab.connect[langVal]}
-                        url = {"/"}
+                        url = {"https://arvest-dev.tetras-libre.fr/"}
                     />
                 </div>
             </div>
@@ -163,7 +163,7 @@
     <div class="connect_button_cont">
         <BigButton
             label = {PageVocab.connect[langVal]}
-            url = {"/"}
+            url = {"https://arvest-dev.tetras-libre.fr/"}
         />
     </div>
 
