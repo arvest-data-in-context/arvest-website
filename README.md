@@ -1,3 +1,5 @@
+**THIS HAS MIGRATED TO [GITLAB](https://gitlab.huma-num.fr/arvest/arvest.gitpages.huma-num.fr)***
+
 # arvest.app
 
 The website for the web app Arvest. This website was created using the [svelte](https://svelte.dev/) framework, for more info, consult their [docs](https://svelte.dev/docs/introduction).
